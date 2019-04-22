@@ -9,9 +9,11 @@
 #    docker run -it -v $(pwd):/root lakka
 #
 
-FROM debian:stretch
+FROM ubuntu:bionic
 
 ENV DEBIAN_FRONTEND=noninteractive
+
+# Lakka Dependencies
 
 RUN apt-get update \
 	&& apt-get upgrade -y \
@@ -41,8 +43,6 @@ RUN apt-get update \
 		unzip \
 		wget \
 		xfonts-utils \
-		xfonts-utils \
-		xfonts-utils \
 		xsltproc \
 		xz-utils \
 		zip \
@@ -53,6 +53,7 @@ RUN apt-get update \
 	&& apt-get install -y \
 		libglib2.0 \
 		xxd \
+		meson \
 	&& rm -rf /var/lib/apt/lists/*
 
 ENV HOME /root

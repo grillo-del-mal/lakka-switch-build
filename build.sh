@@ -10,7 +10,7 @@ docker run --rm \
     --user $(id -u):$(id -g) \
     -e DISTRO="Lakka" \
     -e PROJECT="Switch" \
-    -e DEVICE="Switch-L4T" \
+    -e DEVICE="L4T" \
     -e ARCH="aarch64" \
     -ti lakka:latest \
     make image -j 4
