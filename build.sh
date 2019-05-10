@@ -3,6 +3,7 @@
 set -e
 set -x
 
+docker pull starcarr/lakka:nightly
 docker build -t lakka:latest .
 docker run --rm \
     -v $(pwd)/Lakka-LibreELEC:/opt/lakka \
